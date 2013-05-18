@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  email: MyString
+  first_name: MyString
+  last_name: MyString
+  password_hash: MyString
+  password_salt: MyString
+  date_of_birth: 2013-05-05 14:48:58
+  GPA: 1
+  sat: 1
+  phone: 1
+  allow_text: false
+  allow_email_notifications: false
+
+two:
+  email: MyString
+  first_name: MyString
+  last_name: MyString
+  password_hash: MyString
+  password_salt: MyString
+  date_of_birth: 2013-05-05 14:48:58
+  GPA: 1
+  sat: 1
+  phone: 1
+  allow_text: false
+  allow_email_notifications: false

@@ -1,0 +1,63 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.college-list{
+	width:75%;
+	margin: 0% 10%;
+	padding: .5%;
+	background-color: white;
+	border: 1px lightgrey solid;
+	-moz-box-shadow: 5px 5px 2.5px #777777;
+	-webkit-box-shadow: 5px 5px 2.5px #777777;
+	box-shadow: 5px 5px 10px #777777;
+	border-radius: 5px;
+}
+.college {
+	margin:1%;
+	padding: 2%;
+	float: left;
+	width: 95%;
+	border-bottom: 1px grey solid;
+}
+.college-header{
+	width: 100%;
+	display: inline;
+}
+h4{
+	margin: 2%;
+	width: 45%;
+	float: left;
+}
+.add-college{
+	margin: 2%;
+	width: 45%;
+	float: right;
+	text-align: right;
+}
+.college-item{
+	width: 25%;
+	margin: 1%;
+	display: inline;
+}
+.progress{
+	padding: 20%;
+}
+@media (max-width: 720px) {
+  #content{
+  	width: 98%;
+  }
+  .college-list {
+    width: 85%;
+  }
+}
+
+@media (max-width: 480px) {
+  #content{
+  	width: 100%;
+  }
+
+  .college-list{
+    width: 95%;
+    margin: 0 auto;
+  }
+}

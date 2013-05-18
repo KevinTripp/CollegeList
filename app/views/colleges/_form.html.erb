@@ -1,0 +1,30 @@
+<h1>Create College</h1>
+<%= form_for @college do |f| %>
+	<% if @college.errors.any? %>
+		<div class ="error_messages error">
+			<h2> Form is invalid </h2>
+			<ul>
+				<% for message in @college.errors.full_messages %>
+					<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<div>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+	<div>
+		<%= f.label :due_date %>
+		<%= f.date_select :due_date %>
+	</div>
+	<div>
+		<%= f.label :student_rank %>
+		<%= f.number_field :student_rank %>
+	</div>
+
+	<div class = "button">
+		<%= f.submit %>
+	</div>
+<% end %>

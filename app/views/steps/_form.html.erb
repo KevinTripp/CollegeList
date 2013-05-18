@@ -1,0 +1,26 @@
+
+<%= form_for @step do |f| %>
+	<% if @step.errors.any? %>
+		<div class ="error_messages">
+			<h2> Form is invalid </h2>
+			<ul>
+				<% for message in @step.errors.full_messages %>
+					<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<%= hidden_field(:step, :college_id, :value => @college.id) %>
+	<div>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+	<div>
+		<%= f.label :duedate %>
+		<%= f.date_select :duedate %>
+	</div>
+
+	<div class = "button">
+		<%= f.submit %>
+	</div>
+<% end %>

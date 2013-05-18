@@ -1,0 +1,23 @@
+<div class = "breadcrumbs"><%= link_to "Back to your colleges", user_path(session[:user_id]) %></div>
+<div class = "college-steps">
+	<h3><span>Steps for: <%= @college.name %></span> - <span><%= @college.percent_complete %>% complete</span></h3>
+		<% @steps.each do |step| %>
+			<div class = "step <%= 'complete' if step.complete == true %>">
+				<span>
+					<%= form_for step do |f| %>
+						<span>
+							<%= f.check_box :complete%>									
+							<%= f.label :complete %>
+						</span>
+						<span class = "step name"><%= step.name %></span>
+						<span class = "step duedate"><%= step.duedate %></span>
+						<span class = "button step_submit">
+						<%= f.submit %>
+						</span>
+					<% end %>
+				</span>
+			</div>
+	    <% end %>
+</div>
+
+<%= link_to "Create step", new_step_path(:id => @college.id) %>

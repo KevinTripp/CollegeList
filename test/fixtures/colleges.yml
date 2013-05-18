@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  tuition: 1
+  due_date: 2013-05-05
+  student_rank: 1
+  student_progress: 1
+  accepted: false
+  complete: false
+  user_id: 1
+  address1: MyString
+  address2: MyString
+  zip: 1
+  state: MyString
+  city: MyString
+
+two:
+  name: MyString
+  tuition: 1
+  due_date: 2013-05-05
+  student_rank: 1
+  student_progress: 1
+  accepted: false
+  complete: false
+  user_id: 1
+  address1: MyString
+  address2: MyString
+  zip: 1
+  state: MyString
+  city: MyString

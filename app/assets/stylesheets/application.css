@@ -1,0 +1,78 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+ body{
+ 	width: 100%;
+ }
+nav{
+  	background-color:#2C5463;
+  	height:30px;
+  	text-align:right; 
+}
+nav ul{
+  	font-size: 20px;
+  	margin: 0;
+  	padding: 0;
+  	list-style: none;
+}
+nav li{
+  	display: block;
+  	position: relative;
+  	float: right;
+
+}
+ 
+nav ul li a {
+	display: block;
+	padding: 7px 15px 3px 15px;
+	background: #2C5463;
+	color: #ffffff;  
+	text-decoration: none;
+	margin-left: 1px;
+	white-space: nowrap;
+	height:20px; /* Width and height of top-level nav items */
+	font-size: 70%;
+}
+ 
+nav ul li a:hover { 
+  background: #617F8A; 
+}
+
+#content{
+	background-color: rgb(0,0,0, 0.5);
+	width: 85%;
+	margin: 0 auto;
+	padding: 2%;
+}
+.flash{
+	margin: 0 auto;
+	height: 5%;
+	width: 100%;
+	text-align: center;
+	padding: 5px;
+}
+.error{
+	color: rgb(216, 0, 12);
+	background-color: rgba(255, 186, 186);
+}
+.success{
+	color: rgb(79, 138, 16);
+	background-color: rgba(223,242,191, .3);
+}
+.notice{
+	color: rgb(0, 0, 0,);
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.breadcrumbs{
+	font-size: 10px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CollegeList</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+ 
+  <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/smoothness/jquery-ui.css", "application" %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application" %>
+
+</head>
+<body>
+	<nav>
+		<% if current_user %>
+			<ul>
+				<li><%= link_to "Log out", log_out_path %></li>
+				<li><%= link_to "My colleges", user_path(session[:user_id]) %></li>
+				<li><a href="#">Logged in as <%= current_user.first_name %>.</a></li>
+		<% else %>
+				<%= link_to "Sign up", sign_up_path %>
+				or 
+				<%= link_to "Log in", log_in_path %>
+			</ul>
+		<% end %>
+	</nav>
+	<div class = "message">
+		<% flash.each do |name, msg| %>
+			<%= content_tag :div, msg, :class => "flash #{name}" %>
+		<% end %>
+	</div>
+<div id="content">
+	<%= yield %>
+	<!-- For debuggin params <%= params.inspect %> -->
+</div>
+
+</body>
+</html>

@@ -37,10 +37,9 @@
       <% end %>
       <div class = "college-item accepted">
         <%= form_for college do |f| %>
-
           <b>Accepted?</b>
-          <%= f.check_box :accepted %>
-          <span class = "button step_submit">
+          <span class = "button college_submit">
+            <%= f.check_box :accepted %>
             <%= f.submit %>
           </span>
           <% end %>

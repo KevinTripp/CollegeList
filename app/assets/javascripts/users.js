@@ -5,9 +5,9 @@
 $(document).ready(function(){
 
 
-	$('.step_submit').hide();
+	$('.college_submit').hide();
 
-	$("[name='step[complete]']").click(function(){
+	$("[name='college[accepted]']").click(function(){
 		$(this).closest('form').submit();
 	});
 

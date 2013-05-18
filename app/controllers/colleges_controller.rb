@@ -20,6 +20,16 @@ class CollegesController < ApplicationController
 		calc_percent_complete
 	end
 
+	def update
+		college = College.find_by_id(params[:id])
+      	if college.update_attributes(params[:college])
+      		redirect_to user_path(:id => college.user_id), :flash => {:success => "College was saved!"}
+		else
+			Rails.logger.info(@college.errors.messages.inspect)
+			redirect_to user_path(:id => @college.user_id), :flash => {:error =>  "College couldn't be saved!"}
+		end
+	end 
+
 	def calc_percent_complete
         completed_steps = 0
 

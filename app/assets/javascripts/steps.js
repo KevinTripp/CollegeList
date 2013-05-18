@@ -1,8 +1,8 @@
 $('document').ready(function(){
 
-$('.step_submit').hide();
+	$('.step_submit').hide();
 
-$("[name='step[complete]']").click(function(){
-  $(this).closest('form').submit();
-});
+	$("[name='step[complete]']").click(function(){
+		$(this).closest('form').submit();
+	});
 });

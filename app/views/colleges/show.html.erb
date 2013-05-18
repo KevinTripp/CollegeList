@@ -5,19 +5,19 @@
 			<div class = "step <%= 'complete' if step.complete == true %>">
 				<span>
 					<%= form_for step do |f| %>
-						<span>
+						<span class = "item">
 							<%= f.check_box :complete%>									
-							<%= f.label :complete %>
-						</span>
-						<span class = "step name"><%= step.name %></span>
-						<span class = "step duedate"><%= step.duedate %></span>
+						</span class = "item">
+						<span class = "item"><%= step.name %></span>
+						<span class = "item">Due - <%= step.duedate %></span>
 						<span class = "button step_submit">
 						<%= f.submit %>
 						</span>
 					<% end %>
+
 				</span>
 			</div>
 	    <% end %>
+	    <%= link_to "Create new step", new_step_path(:id => @college.id) %>
 </div>
 
-<%= link_to "Create step", new_step_path(:id => @college.id) %>

@@ -24,7 +24,7 @@
       </div>
       <div class = "college-item">
         <div class ="ui-progress-bar ui-container transition" id="progress_bar">
-            <div class="ui-progress" style="width: <%= college.percent_complete %>%;">
+            <div class="ui-progress <%= college.name%>" style="width: <%= college.percent_complete %>%;">
                 <span class="ui-label" style="display: none;">Completed</span>
             </div>
         </div >
@@ -36,8 +36,14 @@
         </div>
       <% end %>
       <div class = "college-item accepted">
-        <b>Accepted?</b>
-        <%= check_box_tag :complete %>
+        <%= form_for college do |f| %>
+
+          <b>Accepted?</b>
+          <%= f.check_box :accepted %>
+          <span class = "button step_submit">
+            <%= f.submit %>
+          </span>
+          <% end %>
       </div>
     </div>
   <% end %>

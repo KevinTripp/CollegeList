@@ -16,5 +16,6 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(session[:user_id])
     	@colleges = College.where("user_id = ?",@user.id)
+    	gon.colleges = @colleges
 	end
 end

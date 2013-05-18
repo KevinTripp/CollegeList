@@ -6,6 +6,7 @@ class CollegesController < ApplicationController
 	def create
 		@college = College.new(params[:college])
 		@college.user_id = session[:user_id]
+		@college.percent_complete = 0
 		if @college.save
 			redirect_to user_path(@college.user_id), :notice => "Your college was saved!"
 		else

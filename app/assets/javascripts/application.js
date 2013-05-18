@@ -10,11 +10,9 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+/*leave the following line empty */
+
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
 //= require_tree .
-
-$(function(){
-	$('#step_duedate').datepicker();
-});

@@ -4,6 +4,8 @@ gem 'rails', '3.2.8'
 
 gem "acts_as_list", "~> 0.2.0"
 
+gem 'gon'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

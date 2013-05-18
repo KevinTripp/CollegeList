@@ -3,8 +3,6 @@
 //# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $(document).ready(function(){
-
-
 	$('.college_submit').hide();
 
 	$("[name='college[accepted]']").click(function(){

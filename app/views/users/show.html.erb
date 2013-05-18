@@ -29,7 +29,7 @@
             </div>
         </div >
       </div>
-      <% if college.complete %>
+      <% if college.accepted %>
         <div class = "college-item complete">
           <b>Complete?</b>
           <%= college.complete %>
@@ -38,8 +38,8 @@
       <div class = "college-item accepted">
         <%= form_for college do |f| %>
           <b>Accepted?</b>
-          <span class = "button college_submit">
             <%= f.check_box :accepted %>
+            <span class = "button college_submit">
             <%= f.submit %>
           </span>
           <% end %>
